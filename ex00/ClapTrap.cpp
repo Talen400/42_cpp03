@@ -2,6 +2,7 @@
 
 ClapTrap::ClapTrap() 
 {
+
 	std::cout << "ClapTrap '" << name << "' is clap!" << std::endl;
 }
 
@@ -29,4 +30,24 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 ClapTrap::~ClapTrap()
 {
 	std::cout << "Claptrap '" << name << "' is trapped :<" << std::endl;
+}
+
+void	ClapTrap::attack(const std::string &target)
+{
+	std::cout << "Claptrap '"
+			 << name << "' attacks '"
+			 << target << "', causing "
+			 << attackDamage << " points of damage"
+			 << std::endl;
+}
+
+void	ClapTrap::takeDamage(unsigned int amout)
+{
+	std::cout << "ClapTrap '" << name << "' lost " << amout << " of points life !" << std::endl;
+}
+
+void	ClapTrap::beRepaired(unsigned int amout)
+{
+	std::cout << "ClapTrap '" << name << "' repaired " << "" << std::endl;
+
 }
